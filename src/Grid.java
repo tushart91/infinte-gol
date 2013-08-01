@@ -44,7 +44,6 @@ public class Grid {
 			newCell.setNeighbourCount(count);
 			neighbourCount.add(newCell);
 		}
-		System.out.println(neighbourCount);
 		return neighbourCount;
 	}
 	
