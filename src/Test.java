@@ -9,14 +9,16 @@ public class Test {
 	 */
 	public static void main(String[] args) {
 		
-		ArrayList<Cell> bacteria = new ArrayList<Cell>();
-		bacteria.add(new Cell(new Point(0,0)));
-		bacteria.add(new Cell(new Point(2,0)));
-		bacteria.add(new Cell(new Point(2,1)));
-		bacteria.add(new Cell(new Point(2,2)));
-		Grid obj = new Grid(bacteria);
+		ArrayList<Cell> colony = new ArrayList<Cell>();
+		colony.add(new Cell(new Point(0,0)));
+		colony.add(new Cell(new Point(2,0)));
+		colony.add(new Cell(new Point(2,1)));
+		colony.add(new Cell(new Point(2,2)));
 		
-		bacteria = obj.populateNextGen(obj.countRepeatedCell(obj.neighbourOfAliveCells()));
-		System.out.println(bacteria);
+        Grid grid = new Grid(colony);
+		
+		colony = grid.populateNextGen(grid.countRepeatedCell(grid.neighbourOfAliveCells()));
+		
+        System.out.println(colony);
 	}
 }

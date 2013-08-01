@@ -15,7 +15,7 @@ public class Cell implements Comparable<Cell> {
 	}
 
 	public String toString() {
-		return position.x + " " + position.y + " " + neighbourCount;
+		return position.x + " " + position.y + " " ;
 	}
 
 	public Integer getNeighbourCount() {
