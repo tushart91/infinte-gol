@@ -17,7 +17,7 @@ public class Test {
 		
         Grid grid = new Grid(colony);
 		
-		colony = grid.populateNextGen(grid.countRepeatedCell(grid.neighbourOfAliveCells()));
+		colony = grid.populateNextGen(grid.countRepeatedCell(grid.neighboursOfAliveCells()));
 		
         System.out.println(colony);
 	}

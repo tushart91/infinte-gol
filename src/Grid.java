@@ -12,7 +12,7 @@ public class Grid {
 			livingCells.add(bacs.get(i));
 	}
 
-	public ArrayList<Cell> neighbourOfAliveCells() {
+	public ArrayList<Cell> neighboursOfAliveCells() {
 		ArrayList<Cell> neighbourCells = new ArrayList<Cell>();
 		for (int i = 0; i < livingCells.size(); i++) {
 			Cell currentCell = livingCells.get(i);
@@ -27,7 +27,6 @@ public class Grid {
 			neighbourCells.add(new Cell(new Point(currentCell.getPosition().x + 1, currentCell.getPosition().y + 1)));
 		}
 		Collections.sort(neighbourCells);
-		System.out.println(neighbourCells);
 		return neighbourCells;
 	}
 	
